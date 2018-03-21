@@ -1,7 +1,5 @@
+require "mechanize"
 require "mechanize/cookie_store/version"
 
-module Mechanize
-  module CookieStore
-    # Your code goes here...
-  end
+module Mechanize::CookieStore
 end
