@@ -2,11 +2,15 @@ module Mechanize::CookieStore
   module CookieJar
 
     def save
-      "Saved with mechanize-cookie_store"
+      each do |cookie|
+        ::Mechanize::CookieStore::Store::Redis.save(cookie)
+      end
     end
 
-    def load
-      "Loaded with mechanize-cookie_store"
+    def load(options = {})
+      ::Mechanize::CookieStore::Store::Redis.all(options).each do |cookie|
+        add(cookie)
+      end
     end
 
   end
