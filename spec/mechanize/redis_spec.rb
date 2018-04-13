@@ -1,6 +1,4 @@
-require 'mechanize'
-
-RSpec.describe Mechanize::CookieStore::Store::Redis do
+RSpec.describe Mechanize::CookieStore::Redis do
   SECONDS_OF_DAY =  24 * 60 * 60
 
   let(:agent) { Mechanize.new }

@@ -1,7 +1,6 @@
 require "mechanize"
 require "mechanize/cookie_store/cookie_jar"
-require "mechanize/cookie_store/store"
-require "mechanize/cookie_store/store/redis"
+require "mechanize/cookie_store/redis"
 
 module Mechanize::CookieStore
 

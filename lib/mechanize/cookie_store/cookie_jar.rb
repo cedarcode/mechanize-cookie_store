@@ -3,12 +3,12 @@ module Mechanize::CookieStore
 
     def save
       each do |cookie|
-        ::Mechanize::CookieStore::Store::Redis.save(cookie)
+        ::Mechanize::CookieStore::Redis.save(cookie)
       end
     end
 
     def load(options = {})
-      ::Mechanize::CookieStore::Store::Redis.all(options).each do |cookie|
+      ::Mechanize::CookieStore::Redis.all(options).each do |cookie|
         add(cookie)
       end
     end
