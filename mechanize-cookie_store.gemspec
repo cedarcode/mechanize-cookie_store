@@ -2,9 +2,11 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+require "mechanize/cookie_store/version"
+
 Gem::Specification.new do |spec|
   spec.name          = "mechanize-cookie_store"
-  spec.version       = "0.1.0"
+  spec.version       = Mechanize::CookieStore::VERSION
   spec.authors       = ["Braulio Martinez"]
   spec.email         = ["braulio@cedarcode.com"]
 
