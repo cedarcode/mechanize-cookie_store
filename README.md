@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/cedarcode/mechanize-cookie_store.svg?branch=master)](https://travis-ci.org/cedarcode/mechanize-cookie_store)
 
-mechanize-cookie_store is an extension to [Mechanize gem](https://github.com/sparklemotion/mechanize) that allow you to persist the Mechanize agent cookie set, in a smarter way than serialized or plain files in the server's system. This allows you to share your cookies across multiple server instances, among other benefits.
+mechanize-cookie_store is an extension to [mechanize gem](https://github.com/sparklemotion/mechanize) that allows you to persist the mechanize agent cookie set in a smarter way than serialized or plain files in the server's system. One of its biggest benefits is allowing you to share your cookies across multiple server instances.
 
 ## Installation
 
@@ -25,7 +25,7 @@ Or install it yourself as:
 For *Rails* applications you can create `config/initializers/mechanize-cookie_store.rb` and provide the necessary
 configuration params to access your desired persistance method.
 
-If your not using Rails, you just need to make sure to run the same configuration code before using Mechanize.
+If you're not using Rails, you just need to make sure to run the same configuration code before using Mechanize.
 
 Please see below the available built-in stores and their specific configurations:
 
@@ -75,7 +75,7 @@ Or use if you want to load specific cookie set you can pass to `load` the option
 agent.cookie_jar.load(domain: "example.com", path: "/mypath", name: "myCookie")
 ```
 
-Please note, that these options correpond to the fields of the [HTTP::Cookie](https://github.com/sparklemotion/http-cookie/blob/v1.0.3/lib/http/cookie.rb#L27) class, an inherited dependency from Mechanize.
+Please note that these options correpond to the fields of the [HTTP::Cookie](https://github.com/sparklemotion/http-cookie/blob/v1.0.3/lib/http/cookie.rb#L27) class, an inherited dependency from Mechanize.
 
 
 ## Dependencies
